@@ -8,12 +8,10 @@ import {
     StyleSheet,
     TouchableOpacity,
     Alert,
-    Image,
     ScrollView} from 'react-native';
 
 import db from '../config';
 import firebase from 'firebase';
-import { RFValue } from "react-native-responsive-fontsize";
 
 export default class SignupLoginScreen extends Component{
   constructor(){
@@ -188,12 +186,7 @@ showModal = ()=>{
             this.showModal()
           }
         <View style={{justifyContent:'center', alignItems:'center'}}>
-          <View style={styles.santaView}>
-            <Image
-              source={require("../assets/barter2.png")}
-              style={styles.santaImage}
-            />
-          </View>
+          <Text style={styles.title}>Barter System App</Text>
         </View>
         <View>
             <TextInput
@@ -340,16 +333,5 @@ const styles = StyleSheet.create({
    color:'#ffff',
    fontWeight:'200',
    fontSize:20
- },
- santaView: {
-    flex: 0.85,
-    justifyContent: "center",
-    alignItems: "center",
-    padding: RFValue(10)
-  },
-  santaImage: {
-    width: "70%",
-    height: "100%",
-    resizeMode: "stretch"
-  },
+ }
 })
